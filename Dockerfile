@@ -14,6 +14,9 @@ COPY . .
 # Generate Prisma client
 RUN npx prisma generate
 
+# Compile TypeScript
+RUN npm run build
+
 # Make start script executable
 RUN chmod +x start.sh
 
